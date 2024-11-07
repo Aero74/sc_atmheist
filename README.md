@@ -22,7 +22,7 @@ Prosty skrypt umożliwiający rabowanie bankomatu za pomocą termitu.
 		close = true,
 	},
 
-# Prewiev
+# Preview
 
 https://streamable.com/gwvs1r
 
