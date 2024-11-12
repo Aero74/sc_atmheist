@@ -83,23 +83,12 @@ function PlantThermite()
     end
 end
 
-Citizen.CreateThread(function()
-    while true do
-        hasBag = exports.ox_inventory:Search('count', 'bag') > 0
-        Citizen.Wait(1000)
-    end
-end)
-
 function TakeMoney()
             ox_target:addModel(ModelATM, {
                 {
                     name = 'TakeMoney',
+                    items = 'bag',
                     onSelect = function()
-                        if not hasBag then
-                            exports['sc-notify']:scnotification("error", "You need bag to collect the cash.")
-                            return
-                        end
-
                         if lib.progressBar({
                             duration = 15000,
                             label = 'Grabing money...',
